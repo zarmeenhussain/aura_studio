@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Products | AURA STUDIOS Luxury Streetwear</title>
+  <meta name="description" content="Explore the full collection of luxury outerwear, heavyweight basics, tailored trousers, and minimalist accessories from AURA STUDIOS.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23121212'><circle cx='12' cy='12' r='10'/></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <span>Free Express Shipping Worldwide <span class="accent-highlight">|</span> Autumn / Winter Drop Live</span>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-container">
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="index.html" class="brand-logo">
+        AURA <span>STUDIOS</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main menu">
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="shop.html?category=outerwear" class="nav-link">Collections</a>
+        <a href="lookbook.html" class="nav-link">Lookbook</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn" aria-label="Open search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <a href="about.html" class="action-btn" aria-label="Client account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+
+        <button class="action-btn cart-trigger-btn" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count-badge">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header Banner -->
+    <section class="page-banner">
+      <div class="container text-center">
+        <span class="section-tag">Autumn / Winter 2026</span>
+        <h1 class="section-title">All Products</h1>
+        <p class="section-desc" style="margin-left: auto; margin-right: auto;">
+          Sculptural streetwear silhouettes crafted from organic French terry, raw Japanese denims, and Italian virgin wools.
+        </p>
+      </div>
+    </section>
+
+    <!-- Shop Content Container -->
+    <div class="container section-spacing">
+      <!-- Toolbar -->
+      <div class="shop-toolbar">
+        <div>
+          <button class="btn-mobile-filter" id="mobileFilterToggle">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            Filter Selection
+          </button>
+          <span id="shopProductCount" style="font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); margin-left: 0.5rem;">8 Products</span>
+        </div>
+
+        <div class="shop-sort-wrap">
+          <label for="shopSortSelect">Sort By:</label>
+          <select id="shopSortSelect" class="sort-select">
+            <option value="featured">Featured Collection</option>
+            <option value="newest">Newest Arrivals</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+          <button id="clearFiltersBtn" class="btn btn-secondary btn-sm" style="margin-left: 0.5rem;">Reset</button>
+        </div>
+      </div>
+
+      <!-- Main Layout: Sidebar + Grid -->
+      <div class="shop-layout">
+        <!-- Sidebar Filters -->
+        <aside class="filter-sidebar">
+          <!-- Category Group -->
+          <div>
+            <div class="filter-group-header">
+              <h3 class="filter-group-title">Category</h3>
+            </div>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-label">
+                <input type="checkbox" value="outerwear" class="filter-category-checkbox">
+                <span>Outerwear & Coats</span>
+                <span class="filter-count">(3)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox" value="essentials" class="filter-category-checkbox">
+                <span>Heavyweight Essentials</span>
+                <span class="filter-count">(3)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox" value="tailoring" class="filter-category-checkbox">
+                <span>Tailored Suiting</span>
+                <span class="filter-count">(2)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox" value="accessories" class="filter-category-checkbox">
+                <span>Leather & Accessories</span>
+                <span class="filter-count">(2)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Size Group -->
+          <div style="border-top: 1px solid var(--border-light); padding-top: 1.5rem;">
+            <div class="filter-group-header">
+              <h3 class="filter-group-title">Size</h3>
+            </div>
+            <div class="size-filter-grid">
+              <button class="size-pill-btn" data-size="S">S</button>
+              <button class="size-pill-btn" data-size="M">M</button>
+              <button class="size-pill-btn" data-size="L">L</button>
+              <button class="size-pill-btn" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <!-- Color Group -->
+          <div style="border-top: 1px solid var(--border-light); padding-top: 1.5rem;">
+            <div class="filter-group-header">
+              <h3 class="filter-group-title">Color Palette</h3>
+            </div>
+            <div class="color-filter-list">
+              <span class="color-filter-dot" data-color="charcoal" style="background-color: #242424;" title="Charcoal"></span>
+              <span class="color-filter-dot" data-color="off-white" style="background-color: #F0EDE6;" title="Off-White"></span>
+              <span class="color-filter-dot" data-color="taupe" style="background-color: #B5A18C;" title="Taupe"></span>
+              <span class="color-filter-dot" data-color="sage" style="background-color: #6E7969;" title="Sage"></span>
+              <span class="color-filter-dot" data-color="black" style="background-color: #111111;" title="Pitch Black"></span>
+            </div>
+          </div>
+
+          <!-- Guarantee Badge in Sidebar -->
+          <div style="background-color: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-sm); margin-top: 1rem;">
+            <h4 style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">AURA Quality Seal</h4>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
+              Every garment undergoes rigorous double-needle seam inspection and pre-shrink washing before dispatch.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Product Grid (8 Items) -->
+        <div class="products-grid">
+          <!-- Item 1 -->
+          <article class="product-card" data-product-id="1" data-category="essentials" data-sizes="S,M,L,XL" data-colors="charcoal,off-white,sage" data-product-title="Heavyweight Oversized Hoodie" data-product-price="140" data-date-added="20261010">
+            <div class="product-card-media">
+              <span class="product-card-badges">
+                <span class="badge badge-dark">Bestseller</span>
+              </span>
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=800&auto=format&fit=crop" alt="Heavyweight Oversized Hoodie" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=800&auto=format&fit=crop" alt="Heavyweight Oversized Hoodie Model" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">500 GSM French Terry</span>
+              <h3 class="product-title"><a href="product-detail.html">Heavyweight Oversized Hoodie</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$140.00</span>
+                <span class="product-price-old">$165.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #242424;" title="Charcoal"></span>
+                <span class="swatch-dot" style="background-color: #F0EDE6;" title="Off-White"></span>
+                <span class="swatch-dot" style="background-color: #6E7969;" title="Sage"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="product-card" data-product-id="2" data-category="outerwear" data-sizes="M,L,XL" data-colors="taupe,black" data-product-title="Tailored Double-Breasted Wool Overcoat" data-product-price="380" data-date-added="20261014">
+            <div class="product-card-media">
+              <span class="product-card-badges">
+                <span class="badge badge-sale">New Drop</span>
+              </span>
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=800&auto=format&fit=crop" alt="Tailored Double-Breasted Wool Overcoat" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="Tailored Wool Overcoat Model" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">Italian Virgin Wool</span>
+              <h3 class="product-title"><a href="product-detail.html">Tailored Double-Breasted Overcoat</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$380.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #B5A18C;" title="Camel Taupe"></span>
+                <span class="swatch-dot" style="background-color: #111111;" title="Black"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="product-card" data-product-id="3" data-category="tailoring" data-sizes="S,M,L" data-colors="black,charcoal" data-product-title="Structured Minimalist Blazer" data-product-price="210" data-date-added="20260920">
+            <div class="product-card-media">
+              <span class="product-card-badges">
+                <span class="badge badge-outline">15% OFF</span>
+              </span>
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?q=80&w=800&auto=format&fit=crop" alt="Structured Minimalist Blazer" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop" alt="Structured Minimalist Blazer Model" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">Japanese Crepe Wool</span>
+              <h3 class="product-title"><a href="product-detail.html">Structured Minimalist Blazer</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$210.00</span>
+                <span class="product-price-old">$245.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #111111;" title="Midnight Black"></span>
+                <span class="swatch-dot" style="background-color: #242424;" title="Charcoal"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="product-card" data-product-id="4" data-category="tailoring" data-sizes="S,M,L,XL" data-colors="charcoal,taupe" data-product-title="Pleated Relaxed Wide Trousers" data-product-price="165" data-date-added="20261005">
+            <div class="product-card-media">
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop" alt="Pleated Relaxed Wide Trousers" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?q=80&w=800&auto=format&fit=crop" alt="Pleated Trousers Fabric" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">Tailored Gabardine</span>
+              <h3 class="product-title"><a href="product-detail.html">Pleated Relaxed Wide Trousers</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$165.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #242424;" title="Charcoal"></span>
+                <span class="swatch-dot" style="background-color: #B5A18C;" title="Oat Sand"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="product-card" data-product-id="5" data-category="essentials" data-sizes="M,L,XL" data-colors="off-white,taupe" data-product-title="Chunky Ribbed Wool Knit Sweater" data-product-price="195" data-date-added="20261012">
+            <div class="product-card-media">
+              <span class="product-card-badges">
+                <span class="badge badge-sale">New</span>
+              </span>
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?q=80&w=800&auto=format&fit=crop" alt="Chunky Ribbed Wool Knit Sweater" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?q=80&w=800&auto=format&fit=crop" alt="Chunky Ribbed Wool Knit Sweater Model" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">Merino & Alpaca Blend</span>
+              <h3 class="product-title"><a href="product-detail.html">Chunky Ribbed Knit Sweater</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$195.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #F0EDE6;" title="Ivory Cream"></span>
+                <span class="swatch-dot" style="background-color: #B5A18C;" title="Camel"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="product-card" data-product-id="6" data-category="essentials" data-sizes="S,M,L,XL" data-colors="off-white,black" data-product-title="Architectural Heavy Boxy Tee" data-product-price="85" data-date-added="20260815">
+            <div class="product-card-media">
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop" alt="Architectural Heavy Boxy Tee" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=800&auto=format&fit=crop" alt="Boxy Tee Texture" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">310 GSM Combed Cotton</span>
+              <h3 class="product-title"><a href="product-detail.html">Architectural Heavy Boxy Tee</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$85.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #F0EDE6;" title="Chalk White"></span>
+                <span class="swatch-dot" style="background-color: #111111;" title="Washed Black"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7 -->
+          <article class="product-card" data-product-id="7" data-category="accessories" data-sizes="S,M" data-colors="taupe,charcoal" data-product-title="Raw Edge Brushed Wool Scarf" data-product-price="110" data-date-added="20261001">
+            <div class="product-card-media">
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=800&auto=format&fit=crop" alt="Raw Edge Brushed Wool Scarf" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?q=80&w=800&auto=format&fit=crop" alt="Wool Scarf Detail" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">100% Cashmere-Wool Blend</span>
+              <h3 class="product-title"><a href="product-detail.html">Raw Edge Brushed Wool Scarf</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$110.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #B5A18C;" title="Taupe"></span>
+                <span class="swatch-dot" style="background-color: #242424;" title="Charcoal"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8 -->
+          <article class="product-card" data-product-id="8" data-category="accessories" data-sizes="M" data-colors="black" data-product-title="Full-Grain Leather Weekender Duffle" data-product-price="450" data-date-added="20261011">
+            <div class="product-card-media">
+              <span class="product-card-badges">
+                <span class="badge badge-dark">Archive Edition</span>
+              </span>
+              <button class="wishlist-btn" aria-label="Save to wishlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop" alt="Full-Grain Leather Weekender Duffle" class="product-img product-img-primary" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop" alt="Leather Bag Detail" class="product-img product-img-secondary" loading="lazy">
+              <div class="product-card-actions">
+                <button class="btn-quick-view">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Quick View
+                </button>
+                <button class="btn-quick-add" aria-label="Add to cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <span class="product-category-meta">Handcrafted Tuscan Calfskin</span>
+              <h3 class="product-title"><a href="product-detail.html">Full-Grain Leather Weekender</a></h3>
+              <div class="product-price-row">
+                <span class="product-price">$450.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #111111;" title="Matte Black"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">AURA <span>STUDIOS</span></a>
+          <p>Redefining contemporary luxury through architectural restraint, pristine fabrications, and timeless street-tailoring.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Shop Collections</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?category=outerwear">Outerwear & Coats</a></li>
+            <li><a href="shop.html?category=essentials">Heavyweight Essentials</a></li>
+            <li><a href="lookbook.html">Lookbook Vol. IV</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Client Services</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Track Order</a></li>
+            <li><a href="contact.html#faq">Shipping & Returns</a></li>
+            <li><a href="contact.html">Store Appointments</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Studio Flagships</h4>
+          <ul class="footer-links">
+            <li>Paris • New York • Tokyo</li>
+            <li>concierge@aurastudios.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 AURA STUDIOS INC. All Rights Reserved.</div>
+        <div class="payment-methods">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">AMEX</span>
+          <span class="payment-badge">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Your Bag <span id="drawerItemCount">(2)</span></h3>
+      <button class="drawer-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+    <div class="shipping-progress-wrap">
+      <div class="shipping-status-text" id="shippingProgressText">Add <span>$50.00</span> more for Free Express Shipping!</div>
+      <div class="shipping-progress-bar"><div class="shipping-progress-fill" id="shippingProgressFill" style="width: 83%;"></div></div>
+    </div>
+    <div class="cart-items-container" id="cartItemsList"></div>
+    <div class="cart-empty-state" id="cartEmptyState">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path></svg>
+      <h4>Your bag is currently empty</h4>
+    </div>
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-subtotal-row"><span>Subtotal</span><span id="cartSubtotalAmount">$350.00</span></div>
+      <div class="cart-taxes-note">Shipping & taxes calculated at checkout.</div>
+      <button class="btn btn-primary btn-block" id="cartCheckoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-backdrop" id="quickViewModal">
+    <div class="quick-view-modal">
+      <button class="modal-close-btn" id="quickViewClose">&times;</button>
+      <img src="" alt="Product Preview" id="qvModalImage" class="quick-view-image">
+      <div class="quick-view-details">
+        <div>
+          <span class="section-tag" id="qvModalCategory">Studio Essentials</span>
+          <h3 class="detail-title" id="qvModalTitle" style="font-size: 1.6rem; margin-top: 0.35rem;">Product Title</h3>
+          <div class="detail-price-row" style="margin-top: 0.5rem;">
+            <span class="detail-current-price" id="qvModalPrice">$140.00</span>
+            <span class="detail-old-price" id="qvModalOldPrice"></span>
+          </div>
+        </div>
+        <div class="picker-section">
+          <div class="picker-header"><span>Select Size</span></div>
+          <div class="detail-size-options">
+            <button class="size-btn">S</button>
+            <button class="size-btn active">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+          <button class="btn btn-primary btn-block btn-add-to-cart">Add to Bag</button>
+          <a href="product-detail.html" id="qvModalProductLink" class="btn btn-secondary btn-block">Full Product Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close-btn" id="searchCloseBtn">&times;</button>
+    <div class="search-box-wrap">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search silhouettes, capsules, fabrics..." autocomplete="off">
+    </div>
+    <div class="search-trending-tags">
+      <div class="search-trending-title">Trending Searches</div>
+      <div class="search-tags-list">
+        <span class="search-tag-item">Heavyweight Oversized Hoodie</span>
+        <span class="search-tag-item">Wool Overcoat</span>
+        <span class="search-tag-item">Minimalist Blazer</span>
+        <span class="search-tag-item">Pleated Trousers</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div>
+      <div class="mobile-nav-header">
+        <span class="brand-logo" style="font-size: 1.25rem;">AURA <span>STUDIOS</span></span>
+        <button class="drawer-close-btn" id="mobileNavClose">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="shop.html" class="mobile-nav-link">Shop Catalog</a>
+        <a href="lookbook.html" class="mobile-nav-link">Lookbook Vol. IV</a>
+        <a href="about.html" class="mobile-nav-link">About Studio</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+    <div class="mobile-nav-footer">
+      <button class="btn btn-primary btn-block cart-trigger-btn">View Shopping Bag</button>
+    </div>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
